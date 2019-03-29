@@ -1,3 +1,3 @@
-# Pharmazon
+![Pharmazon](https://github.com/zerefwayne/pharmazon/blob/master/src/assets/brand/joined_black.png?raw=true)
 
-Pharmazon Backend URL: [Link](https://github.com/Jigar3/pharmazon-backend)
+### Backend URL: [Link](https://github.com/Jigar3/pharmazon-backend)
