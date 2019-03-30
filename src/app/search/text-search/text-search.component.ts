@@ -10,7 +10,7 @@ export class TextSearchComponent implements OnInit {
 
   constructor() { }
 
-  private medicines: MedicineShort[] = [];
+  medicines: MedicineShort[] = [];
 
   ngOnInit() {
   }
