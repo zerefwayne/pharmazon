@@ -9,13 +9,15 @@ import {MaterialModule} from './material.module';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { HeaderComponent } from './header/header.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

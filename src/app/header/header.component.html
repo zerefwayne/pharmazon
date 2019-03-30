@@ -1,20 +1,25 @@
 <ng-template [ngIf]="!isAuthPage">
 
-  <mat-toolbar color="transparent">
-    <button mat-stroked-button color="primary" routerLink="/login">Login</button>
-    &nbsp;&nbsp;
-    <button mat-stroked-button color="primary" routerLink="/signup">Signup</button>
+  <mat-toolbar color="primary" class="app-header">
+
+    <div class="container" fxLayout fxLayoutAlign="space-between">
+
+      <img src="../../assets/brand/text_white.png" height="30px">
+
+      <button mat-button color="white" routerLink="/login">Logout</button>
+    </div>
+
   </mat-toolbar>
 
 </ng-template>
 
 <ng-template [ngIf]="isAuthPage">
 
-  <div class="header-logo">
-
-    <img src="../../../assets/brand/joined_black.png" height="60px">
-
-  </div>
+  <a routerLink="/">
+    <div class="header-auth">
+      <img src="../../assets/brand/joined_black.png" height="60px">
+    </div>
+  </a>
 
 </ng-template>
 

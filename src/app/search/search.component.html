@@ -1,0 +1,25 @@
+<header>
+    <div class="header-auth" fxLayout="column">
+      <div style="padding: 3rem 10rem;" fxFlex fxLayout fxLayoutAlign="end center" fxLayoutGap="10px">
+        <a class="app-nav-link" routerLink="/">My Cart</a>
+        <a class="app-nav-link" routerLink="/login">Logout</a>
+      </div>
+    </div>
+</header>
+<main fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" style="margin-top: 25rem;">
+
+    <img src="../../assets/brand/joined_black.png" height="80">
+
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+
+      <mat-form-field style="width: 60rem; font-size: 2rem;">
+        <input matInput name="search" ngModel type="text" autocomplete="off">
+      </mat-form-field>
+
+      <button mat-stroked-button style="color: #101010; margin-top: 3rem;" color="primary">Search</button>
+
+    </form>
+
+
+
+</main>
