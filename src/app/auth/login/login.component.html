@@ -1,3 +1,63 @@
-<p>
-  login works!
-</p>
+<section fxLayout fxLayoutAlign="center">
+
+
+  <div fxLayout class="wrapper">
+
+    <div fxFlex="65%" fxLayout="column" fxLayoutAlign="center center">
+
+      <img src="../../../assets/illustrations/login.svg" width="60%">
+
+    </div>
+
+    <div fxFlex>
+
+      <mat-card class="login-form">
+
+        <mat-card-title>
+          <img src="../../../assets/text/login.svg" height="50px">
+        </mat-card-title>
+        <mat-card-content style="padding: 3rem 0">
+
+          <form fxLayout="column">
+
+            <mat-form-field>
+              <input matInput type="text" email placeholder="Email">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput type="password" placeholder="Password">
+            </mat-form-field>
+
+            <div fxLayout fxLayoutAlign="space-between" style="width: 75%; margin-top: 1rem">
+                <mat-checkbox color="primary">
+                  Remember Me
+                </mat-checkbox>
+
+                <a class="text-link" routerLink="/">Forgot Password?</a>
+
+            </div>
+
+            <button mat-raised-button color="primary" style="width: fit-content; margin-top: 3rem; background-color: #17C0EB;">LOGIN</button>
+
+          </form>
+
+        </mat-card-content>
+
+        <hr />
+
+        <mat-card-actions style="margin-top: 4rem">
+
+          <img src="../../../assets/text/new_account.svg" height="40px">
+
+        </mat-card-actions>
+
+      </mat-card>
+
+
+    </div>
+
+  </div>
+
+
+
+</section>
