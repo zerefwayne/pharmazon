@@ -22,7 +22,80 @@
 
 <section style="padding: 2rem;">
 
-  <div class="container">
+  <div class="container" fxLayout fxLayoutGap="50px">
+
+    <div fxFlex="35">
+
+      <img src="../../../assets/sample-prescription.jpg" width="100%" style="border: 2px solid #17C0EB; margin-bottom: 3rem; box-shadow: 0 0 5px #b6b6b6; border-radius: 1rem; overflow: hidden;">
+
+      <button mat-raised-button color="primary" style="margin-right: 1rem;"><mat-icon>check</mat-icon>&nbsp;&nbsp;Submit</button>
+      <button mat-raised-button color="warn"><mat-icon>refresh</mat-icon>&nbsp;&nbsp;Retry Upload</button>
+
+
+    </div>
+
+    <div fxFlex>
+
+      <div class="container">
+
+        <h1 style="font-size: 3.5rem;">Doctor <span style="color: #17C0EB;">Details</span></h1>
+        <hr style="margin: 2rem 0;"/>
+        <h2><span style="color: #7158E2">Name:&nbsp;&nbsp;&nbsp;</span>Dr. Tom Watson</h2>
+        <h2><span style="color: #7158E2">Email:&nbsp;&nbsp;&nbsp;</span>drtomwatson@gmail.com</h2>
+        <h2><span style="color: #7158E2">Phone Number:&nbsp;&nbsp;&nbsp;</span>+27 94 6785421</h2>
+        <h2><span style="color: #7158E2">Registration Number:&nbsp;&nbsp;&nbsp;</span>0529023</h2>
+
+        <h1 style="font-size: 3.5rem; margin-top: 4rem;">Medicines<span style="color: #17C0EB;"></span></h1>
+        <hr style="margin: 2rem 0;"/>
+
+        <div>
+
+          <table mat-table
+                 [dataSource]="dataSource" multiTemplateDataRows
+                 class="mat-elevation-z8">
+            <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+              <th mat-header-cell *matHeaderCellDef> {{column | titlecase}} </th>
+              <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+            </ng-container>
+
+            <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+            <ng-container matColumnDef="expandedDetail">
+              <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+                <div class="example-element-detail"
+                     [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+                  <div class="example-element-description">
+
+                    Medicine Description
+
+                  </div>
+                </div>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+            <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+                class="example-element-row"
+                [class.example-expanded-row]="expandedElement === element"
+                (click)="expandedElement = expandedElement === element ? null : element">
+            </tr>
+            <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+          </table>
+
+
+
+        </div>
+
+        <button mat-raised-button color="primary" style="margin-right: 1rem; margin-top: 2rem; background-color: #17C0EB;"><mat-icon>shopping_cart</mat-icon>&nbsp;&nbsp;Add To Cart</button>
+
+
+
+
+      </div>
+
+
+
+    </div>
+
 
 
 
