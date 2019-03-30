@@ -3,11 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from './auth/login/login.component';
 import {SignupComponent} from './auth/signup/signup.component';
 import {SearchComponent} from './search/search.component';
+import {ImageSearchComponent} from './search/image-search/image-search.component';
+import {TextSearchComponent} from './search/text-search/text-search.component';
 
 const routes: Routes = [
-  {path: '', component: SearchComponent, pathMatch: 'full'},
+  {path: '', pathMatch: 'full', redirectTo: '/search'},
+  {path: 'search', component: SearchComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'signup', component: SignupComponent}
+  {path: 'signup', component: SignupComponent},
+  {path: 'search/image', component: ImageSearchComponent},
+  {path: 'search/text', component: TextSearchComponent}
 ];
 
 @NgModule({
