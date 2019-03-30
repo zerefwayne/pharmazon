@@ -54,7 +54,7 @@
                  [dataSource]="dataSource" multiTemplateDataRows
                  class="mat-elevation-z8">
             <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
-              <th mat-header-cell *matHeaderCellDef> {{column | titlecase}} </th>
+              <th mat-header-cell *matHeaderCellDef style="font-size: 1.5rem; color: #17C0EB;"> {{column | titlecase}} </th>
               <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
             </ng-container>
 

@@ -14,6 +14,7 @@ import { ImageSearchComponent } from './search/image-search/image-search.compone
 import { TextSearchComponent } from './search/text-search/text-search.component';
 import {FormsModule} from '@angular/forms';
 import { MedicineComponent } from './search/medicine/medicine.component';
+import {NgxImageZoomModule} from 'ngx-image-zoom';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { MedicineComponent } from './search/medicine/medicine.component';
     MaterialModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
