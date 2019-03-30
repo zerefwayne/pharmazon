@@ -15,6 +15,9 @@ import {TextSearchComponent} from './search/text-search/text-search.component';
 import {FormsModule} from '@angular/forms';
 import {MedicineComponent} from './search/medicine/medicine.component';
 import {CartComponent} from './cart/cart.component';
+import {AuthService} from './services/auth.service';
+import {CartService} from './services/cart.service';
+import {MedicineService} from './services/medicine.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,7 @@ import {CartComponent} from './cart/cart.component';
     FlexLayoutModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [AuthService, CartService, MedicineService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

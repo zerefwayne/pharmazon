@@ -1,8 +1,8 @@
 {
     "/api": {
-        "target": "http://61ee943a.ngrok.io",
+        "target": "http://ccc770cd.ngrok.io",
         "secure": false,
-        "cross-origin": true,
+        "changeOrigin": true,
         "logLevel": "debug"
     }
 }
