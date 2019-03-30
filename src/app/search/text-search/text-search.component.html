@@ -1,6 +1,7 @@
 <header>
+  <div class="container">
   <div class="header-auth" fxLayout="column">
-    <div style="padding: 3rem 10rem;" fxFlex fxLayout fxLayoutAlign="start center" fxLayoutGap="15px">
+    <div style="padding: 3rem 0;" fxFlex fxLayout fxLayoutAlign="start center" fxLayoutGap="15px">
 
       <a routerLink="/">
         <img src="../../assets/brand/joined_black.png" height="50">
@@ -10,4 +11,76 @@
       <a class="app-nav-link" routerLink="/login">Logout</a>
     </div>
   </div>
+  </div>
 </header>
+
+<section style="padding: 2rem;">
+  <div class="container">
+  <img src="../../../assets/text/searchresults.svg" height="60">
+    <form>
+      <div fxLayout fxLayoutGap="10px" fxLayoutAlign="start center">
+      <div style="font-size: 2rem;">for</div>
+      <mat-form-field style="min-width: 30rem; font-size: 2rem;">
+         <input matInput type="text" required name="query" value='search query' >
+      </mat-form-field>
+        <button mat-icon-button style="outline: none;"><mat-icon>search</mat-icon></button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section style="padding: 2rem;">
+
+  <div class="container" fxLayout="row wrap" fxLayoutAlign="start stretch">
+
+    <mat-card fxFlex="45" style="margin: 10px 20px 10px 0;">
+      <div fxLayout="row">
+        <div fxFlex="20" fxLayoutAlign="center center">
+          <img src="../../../assets/text/plus.svg" height="40" />
+        </div>
+        <div fxLayout="column" fxLayoutAlign="start start">
+          <mat-card-title style="color: #1F2421;">
+            <h1>Crocin</h1>
+          </mat-card-title>
+          <mat-card-content style="margin-bottom: 5px;">
+            <h3>Rs. 85</h3>
+          </mat-card-content>
+        </div>
+      </div>
+    </mat-card>
+
+    <mat-card fxFlex="45" style="margin: 10px 20px 10px 0;">
+      <div fxLayout="row">
+        <div fxFlex="20" fxLayoutAlign="center center">
+          <img src="../../../assets/text/plus.svg" height="40" />
+        </div>
+        <div fxLayout="column" fxLayoutAlign="start start">
+          <mat-card-title style="color: #1F2421;">
+            <h1>Crocin</h1>
+          </mat-card-title>
+          <mat-card-content style="margin-bottom: 5px;">
+            <h3>Rs. 85</h3>
+          </mat-card-content>
+        </div>
+      </div>
+    </mat-card>
+
+    <mat-card fxFlex="45" style="margin: 10px 20px 10px 0;">
+      <div fxLayout="row">
+        <div fxFlex="20" fxLayoutAlign="center center">
+          <img src="../../../assets/text/plus.svg" height="40" />
+        </div>
+        <div fxLayout="column" fxLayoutAlign="start start">
+          <mat-card-title style="color: #1F2421;">
+            <h1>Crocin</h1>
+          </mat-card-title>
+          <mat-card-content style="margin-bottom: 5px;">
+            <h3>Rs. 85</h3>
+          </mat-card-content>
+        </div>
+      </div>
+    </mat-card>
+
+  </div>
+
+</section>
