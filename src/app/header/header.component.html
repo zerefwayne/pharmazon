@@ -1,0 +1,20 @@
+<ng-template [ngIf]="!isAuthPage">
+
+  <mat-toolbar color="transparent">
+    <button mat-stroked-button color="primary" routerLink="/login">Login</button>
+    &nbsp;&nbsp;
+    <button mat-stroked-button color="primary" routerLink="/signup">Signup</button>
+  </mat-toolbar>
+
+</ng-template>
+
+<ng-template [ngIf]="isAuthPage">
+
+  <div class="header-logo">
+
+    <img src="../../../assets/brand/joined_black.png" height="60px">
+
+  </div>
+
+</ng-template>
+
