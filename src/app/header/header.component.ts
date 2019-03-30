@@ -7,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  isAuthPage: boolean = false;
+  isAuthPage: boolean = true;
 
   constructor() { }
 

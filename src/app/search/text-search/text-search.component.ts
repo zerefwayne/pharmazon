@@ -19,6 +19,7 @@ export class TextSearchComponent implements OnInit {
 
 
 
+
   }
 
 

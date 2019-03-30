@@ -1,28 +1,28 @@
 <header>
   <div class="container">
-  <div class="header-auth" fxLayout="column">
-    <div style="padding: 3rem 0;" fxFlex fxLayout fxLayoutAlign="start center" fxLayoutGap="15px">
+    <div class="header-auth" fxLayout="column">
+      <div style="padding: 3rem 0;" fxFlex fxLayout fxLayoutAlign="start center" fxLayoutGap="15px">
 
-      <a routerLink="/">
-        <img src="../../assets/brand/joined_black.png" height="50">
-      </a>
-      <div fxFlex></div>
-      <a class="app-nav-link" routerLink="/">My Cart</a>
-      <a class="app-nav-link" routerLink="/login">Logout</a>
+        <a routerLink="/">
+          <img src="../../assets/brand/joined_black.png" height="50">
+        </a>
+        <div fxFlex></div>
+        <a class="app-nav-link" routerLink="/">My Cart</a>
+        <a class="app-nav-link" routerLink="/login">Logout</a>
+      </div>
     </div>
-  </div>
   </div>
 </header>
 
 <section style="padding: 2rem;">
   <div class="container">
-  <img src="../../../assets/text/searchresults.svg" height="60">
+    <img src="../../../assets/text/searchresults.svg" height="60">
     <form #queryBox="ngForm">
       <div fxLayout fxLayoutGap="10px" fxLayoutAlign="start center">
-      <div style="font-size: 2rem;">for</div>
-      <mat-form-field style="min-width: 30rem; font-size: 2rem;">
-         <input matInput required type="text" name="query" value='search query' >
-      </mat-form-field>
+        <div style="font-size: 2rem;">for</div>
+        <mat-form-field style="min-width: 30rem; font-size: 2rem;">
+          <input matInput required type="text" name="query" value='search query' >
+        </mat-form-field>
         <button mat-icon-button style="outline: none;"><mat-icon>search</mat-icon></button>
       </div>
     </form>
@@ -33,7 +33,8 @@
 
   <div class="container" fxLayout="row wrap" fxLayoutAlign="start stretch">
 
-    <mat-card fxFlex="45" routerLink="/medicine" style="margin: 10px 20px 10px 0; cursor: pointer;">
+
+    <mat-card fxFlex="45" style="margin: 10px 20px 10px 0;">
       <div fxLayout="row">
         <div fxFlex="20" fxLayoutAlign="center center">
           <img src="../../../assets/text/plus.svg" height="40" />
@@ -49,6 +50,7 @@
       </div>
     </mat-card>
 
-   </div>
+
+  </div>
 
 </section>

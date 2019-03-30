@@ -12,6 +12,8 @@ import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
 import { ImageSearchComponent } from './search/image-search/image-search.component';
 import { TextSearchComponent } from './search/text-search/text-search.component';
+import {FormsModule} from '@angular/forms';
+import { MedicineComponent } from './search/medicine/medicine.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { TextSearchComponent } from './search/text-search/text-search.component'
     HeaderComponent,
     SearchComponent,
     ImageSearchComponent,
-    TextSearchComponent
+    TextSearchComponent,
+    MedicineComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { TextSearchComponent } from './search/text-search/text-search.component'
     MaterialModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
