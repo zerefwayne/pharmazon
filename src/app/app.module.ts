@@ -10,6 +10,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
+import { ImageSearchComponent } from './search/image-search/image-search.component';
+import { TextSearchComponent } from './search/text-search/text-search.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { SearchComponent } from './search/search.component';
     LoginComponent,
     SignupComponent,
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    ImageSearchComponent,
+    TextSearchComponent
   ],
   imports: [
     BrowserModule,
