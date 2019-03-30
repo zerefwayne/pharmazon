@@ -6,6 +6,7 @@ import {SearchComponent} from './search/search.component';
 import {ImageSearchComponent} from './search/image-search/image-search.component';
 import {TextSearchComponent} from './search/text-search/text-search.component';
 import {MedicineComponent} from './search/medicine/medicine.component';
+import {CartComponent} from './cart/cart.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: '/search'},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'signup', component: SignupComponent},
   {path: 'search/image', component: ImageSearchComponent},
   {path: 'search/text', component: TextSearchComponent},
-  {path: 'medicine', component: MedicineComponent}
+  {path: 'medicine', component: MedicineComponent},
+  {path: 'cart', component: CartComponent}
 ];
 
 @NgModule({
