@@ -18,13 +18,15 @@ export class MedicineService {
         { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET' }
     }).then(res => {
 
-      res.data.slice(0, 10).forEach((temp: MedicineShort) => {
+
+      res.data.medList.slice(0, 16).forEach((temp: MedicineShort) => {
 
         const newObject: MedicineShort = {
           name: temp.name,
           link: temp.name,
           price: temp.price
         };
+
 
         requiredMedicines.push(newObject);
 

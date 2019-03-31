@@ -12,7 +12,7 @@ import {HeaderComponent} from './header/header.component';
 import {SearchComponent} from './search/search.component';
 import {ImageSearchComponent} from './search/image-search/image-search.component';
 import {TextSearchComponent} from './search/text-search/text-search.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MedicineComponent} from './search/medicine/medicine.component';
 import {CartComponent} from './cart/cart.component';
 import {AuthService} from './services/auth.service';
@@ -38,6 +38,7 @@ import {MedicineService} from './services/medicine.service';
     BrowserAnimationsModule,
     FlexLayoutModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService, CartService, MedicineService],
   bootstrap: [AppComponent]

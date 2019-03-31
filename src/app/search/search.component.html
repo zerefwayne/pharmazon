@@ -12,24 +12,28 @@
     </div>
 </header>
 
-
 <main fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" style="margin-top: 15rem;">
 
     <img src="../../assets/text/search.svg" height="115">
 
-    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #textSearch="ngForm" (ngSubmit)="searchByText(textSearch)">
 
       <mat-form-field style="width: 60rem; font-size: 2rem;">
         <input matInput name="search" ngModel type="text" autocomplete="off">
       </mat-form-field>
 
-      <button mat-stroked-button type="button" routerLink="/search/text" style="color: #101010; margin-top: 3rem;" color="primary">Search</button>
+      <button mat-stroked-button type="submit" style="color: #101010; margin-top: 3rem;" color="primary">Search</button>
 
     </form>
 
   <section style="padding: 3rem 0;">
   <img src="../../assets/text/or.svg" height="20">
   </section>
+
+  <form [formGroup]="fileUpload" (ngSubmit)="onFileSubmit()">
+    <input type="file" name="avatar" (change)="onFileChange($event)">
+    <button type="submit">Submit</button>
+  </form>
 
         <a routerLink="/search/image">
           <img src="../../assets/text/upload_button.png">
