@@ -27,24 +27,19 @@
       <mat-tab label="Items">
           <section>
             <div class="container" fxLayout="column" fxLayoutGap="10px" style="padding: 1rem 0;">
-              <mat-card style="padding: 2rem 5rem;">
-                <mat-card-title style="color: #7158E2">Crocin</mat-card-title>
+
+              <div *ngIf="cartComponents.length == 0" style="width: 100%; padding: 5rem 0;" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+                <mat-spinner [strokeWidth]="1"></mat-spinner>
+                <span style="color: #B6B6B6; font-size: 2rem;">Please wait while we load your cart.</span>
+              </div>
+
+              <mat-card style="padding: 2rem 5rem;" *ngFor="let cartComponent of cartComponents">
+                <mat-card-title style="color: #7158E2">{{ cartComponent.name }}</mat-card-title>
                 <mat-card-content>
-                  <h3>Dosage: 50mg<span style="width: 5rem; display: inline-block;"></span>Quantity: 10<span style="width: 5rem; display: inline-block;"></span>M.R.P. : Rs. 5/tablet</h3>
+                  <h3>{{ cartComponent.price }}<span style="width: 5rem; display: inline-block;"></span>Quantity: 10<span style="width: 5rem; display: inline-block;"></span>M.R.P. : Rs. 5/tablet</h3>
                 </mat-card-content>
               </mat-card>
-              <mat-card style="padding: 2rem 5rem;">
-                <mat-card-title style="color: #7158E2">Ofloxin</mat-card-title>
-                <mat-card-content>
-                  <h3>Dosage: 100mg<span style="width: 5rem; display: inline-block;"></span>Quantity: 5<span style="width: 5rem; display: inline-block;"></span>M.R.P. : Rs. 10/tablet</h3>
-                </mat-card-content>
-              </mat-card>
-              <mat-card style="padding: 2rem 5rem;">
-                <mat-card-title style="color: #7158E2">Ear Drops</mat-card-title>
-                <mat-card-content>
-                  <h3>Dosage: 100ml<span style="width: 5rem; display: inline-block;"></span>Quantity: 1<span style="width: 5rem; display: inline-block;"></span>M.R.P. : Rs. 100/bottle</h3>
-                </mat-card-content>
-              </mat-card>
+
             </div>
             <div style="margin-top: 2rem;" fxLayoutAlign="end">
               <button mat-raised-button color="primary">Checkout&nbsp;&nbsp;<mat-icon>chevron_right</mat-icon></button>
@@ -55,24 +50,19 @@
 
         <section>
             <div class="container" fxLayout="column" fxLayoutGap="10px" style="padding: 1rem 0;">
-              <mat-card style="padding: 2rem 5rem;">
-                <mat-card-title style="color: #7158E2">Crocin</mat-card-title>
+
+              <div *ngIf="previousOrders.length == 0" style="width: 100%; padding: 5rem 0;" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+                <mat-spinner [strokeWidth]="1"></mat-spinner>
+                <span style="color: #B6B6B6; font-size: 2rem;">Please wait while we load your previous orders.</span>
+              </div>
+
+              <mat-card style="padding: 2rem 5rem;" *ngFor="let cartComponent of previousOrders">
+                <mat-card-title style="color: #7158E2">{{ cartComponent.name }}</mat-card-title>
                 <mat-card-content>
-                  <h3>Dosage: 50mg<span style="width: 5rem; display: inline-block;"></span>Quantity: 10<span style="width: 5rem; display: inline-block;"></span>M.R.P. : Rs. 5/tablet</h3>
+                  <h3>{{ cartComponent.price }}<span style="width: 5rem; display: inline-block;"></span>Quantity: 10<span style="width: 5rem; display: inline-block;"></span>M.R.P. : Rs. 5/tablet</h3>
                 </mat-card-content>
               </mat-card>
-              <mat-card style="padding: 2rem 5rem;">
-                <mat-card-title style="color: #7158E2">Ofloxin</mat-card-title>
-                <mat-card-content>
-                  <h3>Dosage: 100mg<span style="width: 5rem; display: inline-block;"></span>Quantity: 5<span style="width: 5rem; display: inline-block;"></span>M.R.P. : Rs. 10/tablet</h3>
-                </mat-card-content>
-              </mat-card>
-              <mat-card style="padding: 2rem 5rem;">
-                <mat-card-title style="color: #7158E2">Ear Drops</mat-card-title>
-                <mat-card-content>
-                  <h3>Dosage: 100ml<span style="width: 5rem; display: inline-block;"></span>Quantity: 1<span style="width: 5rem; display: inline-block;"></span>M.R.P. : Rs. 100/bottle</h3>
-                </mat-card-content>
-              </mat-card>
+
             </div>
           </section>
 

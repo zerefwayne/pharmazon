@@ -41,31 +41,42 @@ export class MedicineService {
 
   }
 
- inCart(): CartShort[] {
+ inCart(): {cart: CartShort[], history: CartShort[]} {
 
-  const  cartMedicines: CartShort[] = [];
-
+  const cartMedicines: CartShort[] = [];
+  const history: CartShort[] = [];
 
   axios.get('/api/user/cart',{
     headers:
       { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET' }
   }).then(res => {
 
-    res.data.forEach((dat: CartShort) =>{
+    res.data.cart.forEach((dat: CartShort) =>{
         const newProduct: CartShort = {
           name: dat.name,
           link: dat.name,
           price: dat.price
         };
         cartMedicines.push(newProduct);
-    })
+    });
+
+    res.data.history.forEach((dat: CartShort) =>{
+      const newProduct: CartShort = {
+        name: dat.name,
+        link: dat.name,
+        price: dat.price
+      };
+      history.push(newProduct);
+    });
+
+
 
   }).catch(err => {
       console.log(err);
   });
 
-    return cartMedicines;
-}
+    return {cart: cartMedicines, history: history};
+  }
 
 
 }
