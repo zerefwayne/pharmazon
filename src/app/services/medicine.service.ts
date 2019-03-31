@@ -92,5 +92,15 @@ export class MedicineService {
     });
   }
   
+  OnCheckout(){
+    axios.delete('/api/user/cart',{
+      headers:
+      { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'DELETE' }
+  }).then(res => {
+    console.log(res);
+  }).catch(err => {
+    console.log(err);
+  });
+  }
 
 }
