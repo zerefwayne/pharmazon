@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MedicineService} from '../services/medicine.service';
+import {CartShort} from '../cart-short.model';
 
 @Component({
   selector: 'app-cart',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private medicineService: MedicineService) { }
 
-  ngOnInit() {
+  res: {cart: CartShort[], history: CartShort[]} = null;
+  cartComponents: CartShort[] = [];
+  previousOrders: CartShort[] = [];
+
+  async ngOnInit() {
+
+    this.res =  await this.medicineService.inCart();
+    this.cartComponents = this.res.cart;
+    this.previousOrders = this.res.history;
+
   }
 
 }
