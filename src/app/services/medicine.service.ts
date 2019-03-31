@@ -77,6 +77,20 @@ export class MedicineService {
 
     return {cart: cartMedicines, history: history};
   }
+  
 
+  OnClickLink(link){
+    const LinkUrl = link;
+    axios.post(`/api/medicine/data`, { data: LinkUrl }, {
+      headers:
+        { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST' }
+    }).then(res => {
+      console.log(res);
+
+    }).catch(err => {
+      console.log(err);
+    });
+  }
+  
 
 }
